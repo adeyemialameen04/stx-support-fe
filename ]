@@ -1,0 +1,10 @@
+import { UserSchema } from "@/types/user";
+
+export const user_info: UserSchema = {
+  profile_pic: "",
+  name: "Al-Ameen Adeyemi",
+  username: "alameen",
+  supporters: 10,
+  membership: 20,
+  shop: 40,
+};
