@@ -10,13 +10,13 @@ import { DropdownMenuArrow } from "@radix-ui/react-dropdown-menu";
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTrigger
+  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-  TooltipProvider
+  TooltipProvider,
 } from "@/components/ui/tooltip";
 import {
   DropdownMenu,
@@ -24,13 +24,14 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuSeparator
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
 type Submenu = {
   href: string;
   label: string;
   active: boolean;
+  icon: LucideIcon;
 };
 
 interface CollapseMenuButtonProps {
@@ -46,7 +47,7 @@ export function CollapseMenuButton({
   label,
   active,
   submenus,
-  isOpen
+  isOpen,
 }: CollapseMenuButtonProps) {
   const isSubmenuActive = submenus.some((submenu) => submenu.active);
   const [isCollapsed, setIsCollapsed] = useState<boolean>(isSubmenuActive);
@@ -75,7 +76,7 @@ export function CollapseMenuButton({
                   "max-w-[150px] truncate",
                   isOpen
                     ? "translate-x-0 opacity-100"
-                    : "-translate-x-96 opacity-0"
+                    : "-translate-x-96 opacity-0",
                 )}
               >
                 {label}
@@ -86,7 +87,7 @@ export function CollapseMenuButton({
                 "whitespace-nowrap",
                 isOpen
                   ? "translate-x-0 opacity-100"
-                  : "-translate-x-96 opacity-0"
+                  : "-translate-x-96 opacity-0",
               )}
             >
               <ChevronDown
@@ -98,7 +99,7 @@ export function CollapseMenuButton({
         </Button>
       </CollapsibleTrigger>
       <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-        {submenus.map(({ href, label, active }, index) => (
+        {submenus.map(({ href, label, active, icon: SubmenuIcon }, index) => (
           <Button
             key={index}
             variant={active ? "secondary" : "ghost"}
@@ -107,14 +108,15 @@ export function CollapseMenuButton({
           >
             <Link href={href}>
               <span className="mr-4 ml-2">
-                <Dot size={18} />
+                {/* <Dot size={18} /> */}
+                <SubmenuIcon size={18} />
               </span>
               <p
                 className={cn(
                   "max-w-[170px] truncate",
                   isOpen
                     ? "translate-x-0 opacity-100"
-                    : "-translate-x-96 opacity-0"
+                    : "-translate-x-96 opacity-0",
                 )}
               >
                 {label}
@@ -142,7 +144,7 @@ export function CollapseMenuButton({
                     <p
                       className={cn(
                         "max-w-[200px] truncate",
-                        isOpen === false ? "opacity-0" : "opacity-100"
+                        isOpen === false ? "opacity-0" : "opacity-100",
                       )}
                     >
                       {label}

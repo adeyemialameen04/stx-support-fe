@@ -1,20 +1,27 @@
+import { LightningBoltIcon } from "@radix-ui/react-icons";
 import {
   Users,
   LayoutGrid,
   LucideIcon,
-  Calendar,
-  Ticket,
   ShoppingCart,
-  Package,
   Newspaper,
   Image,
-  BarChart,
+  PanelLeft,
+  Heart,
+  Lock,
+  Pen,
+  Book,
+  Images,
+  Mail,
+  Terminal,
+  CircleDollarSign,
 } from "lucide-react";
 
 type Submenu = {
   href: string;
   label: string;
   active: boolean;
+  icon?: LucideIcon;
 };
 
 type Menu = {
@@ -37,7 +44,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/dashboard",
-          label: "Dashboard",
+          label: "Home",
           active: pathname === "/dashboard",
           icon: LayoutGrid,
           submenus: [],
@@ -48,148 +55,89 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/analytics",
-          label: "Analytics",
+          href: "/username",
+          label: "View Page",
           active: pathname === "/analytics",
-          icon: BarChart,
+          icon: PanelLeft,
           submenus: [],
         },
       ],
     },
     {
-      groupLabel: "Management",
+      groupLabel: "Monetize",
       menus: [
         {
-          href: "/events",
-          label: "Events",
-          active: pathname.includes("/events"),
-          icon: Calendar,
-          submenus: [
-            {
-              href: "/events",
-              label: "All Events",
-              active: pathname === "/events",
-            },
-            {
-              href: "/events/new",
-              label: "New Event",
-              active: pathname === "/events/new",
-            },
-          ],
-        },
-        {
-          href: "/tickets",
-          label: "Tickets",
-          active: pathname.includes("/tickets"),
-          icon: Ticket,
+          href: "/transactions/supporters",
+          label: "Supporters",
+          active: pathname.includes("/transactions/supporters"),
+          icon: Heart,
           submenus: [],
         },
         {
-          href: "/orders",
-          label: "Orders",
-          active: pathname.includes("/orders"),
+          href: "/membership",
+          label: "Memberships",
+          active: pathname.includes("/tickets"),
+          icon: Lock,
+          submenus: [],
+        },
+        {
+          href: "/shop",
+          label: "Shop",
+          active: pathname.includes("/shop"),
           icon: ShoppingCart,
           submenus: [],
         },
         {
-          href: "/products",
-          label: "Products",
+          href: "",
+          label: "Publish",
           active: pathname.includes("/products"),
-          icon: Package,
+          icon: Pen,
           submenus: [
             {
-              href: "/products",
-              label: "All Products",
+              href: "/publish/post",
+              label: "Posts",
               active: pathname === "/products",
+              icon: Book,
             },
             {
-              href: "/products/new",
-              label: "New Product",
-              active: pathname === "/products/new",
+              href: "/admin/gallery",
+              label: "Gallery",
+              active: pathname === "/admin/gallery",
+              icon: Images,
+            },
+            {
+              href: "/admin/messages",
+              label: "Messages",
+              active: pathname === "/admin/messages",
+              icon: Mail,
             },
           ],
         },
       ],
     },
     {
-      groupLabel: "Content",
+      groupLabel: "Settings",
       menus: [
         {
-          href: "/news",
-          label: "News",
-          active: pathname.includes("/news"),
-          icon: Newspaper,
-          submenus: [
-            {
-              href: "/news",
-              label: "All News",
-              active: pathname === "/news",
-            },
-            {
-              href: "/news/new",
-              label: "New Article",
-              active: pathname === "/news/new",
-            },
-          ],
+          href: "/admin/button-and-graphics",
+          label: "Button & Graphics",
+          active: pathname.includes("/admin/button-and-graphics"),
+          icon: Terminal,
+          submenus: [],
         },
         {
-          href: "/gallery",
-          label: "Gallery",
-          active: pathname.includes("/gallery"),
-          icon: Image,
-          submenus: [
-            {
-              href: "/gallery",
-              label: "All Media",
-              active: pathname === "/gallery",
-            },
-            {
-              href: "/gallery/new",
-              label: "New Gallery",
-              active: pathname === "/gallery/new",
-            },
-          ],
+          href: "/admin/integrations",
+          label: "Integrations",
+          active: pathname.includes("/admin/integrations"),
+          icon: LightningBoltIcon as LucideIcon,
+          submenus: [],
         },
         {
-          href: "/live",
-          label: "Live",
-          active: pathname.includes("/live"),
-          icon: Image,
-          submenus: [
-            {
-              href: "/live",
-              label: "All Live Information",
-              active: pathname === "/live",
-            },
-            {
-              href: "/live/new",
-              label: "New Live Information",
-              active: pathname === "/live/new",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      groupLabel: "Organization",
-      menus: [
-        {
-          href: "/teams",
-          label: "Teams",
-          active: pathname.includes("/teams"),
-          icon: Users,
-          submenus: [
-            {
-              href: "/teams",
-              label: "All Teams",
-              active: pathname === "/teams",
-            },
-            {
-              href: "/teams/new",
-              label: "New Team",
-              active: pathname === "/teams/new",
-            },
-          ],
+          href: "/admin/payouts",
+          label: "Payouts",
+          active: pathname.includes("/admin/payouts"),
+          icon: CircleDollarSign,
+          submenus: [],
         },
       ],
     },

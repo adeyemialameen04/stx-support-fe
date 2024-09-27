@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MenuIcon, PanelsTopLeft } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -19,7 +19,7 @@ export function SheetMenu() {
         </Button>
       </SheetTrigger>
       <SheetContent
-        className="sm:w-72 px-3 h-full flex bg-[#EF3133] flex-col border-r-0"
+        className="sm:w-72 px-3 h-full flex bg-white flex-col border-r-0"
         side="left"
       >
         <SheetHeader>
