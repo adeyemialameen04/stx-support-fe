@@ -4,10 +4,10 @@ import { PanelsTopLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/hooks/use-store";
 import { Button } from "@/components/ui/button";
-import { Menu } from "@/components/admin-panel/menu";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
-import { SidebarToggle } from "@/components/admin-panel/sidebar-toggle";
-import { ScrollArea } from "../ui/scroll-area";
+import { Menu } from "./menu";
+import { SidebarToggle } from "./sidebar-toggle";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 
 export function Sidebar() {
   const sidebar = useStore(useSidebarToggle, (state) => state);
