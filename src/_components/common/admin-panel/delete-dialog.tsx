@@ -9,8 +9,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 import { CircleAlert } from "lucide-react";
-import { Button } from "../ui/button";
 
 export function DeleteDialog({
   children,
