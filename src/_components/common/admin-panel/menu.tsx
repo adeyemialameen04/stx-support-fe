@@ -26,7 +26,7 @@ export function Menu({ isOpen }: MenuProps) {
   return (
     <ScrollArea className="[&>div>div[style]]:!block pr-2">
       <nav className="mt-8 h-full w-full overflow-y-hidden">
-        <ul className="flex pb-2 lg:pb-0 flex-col !text-[#FCFCFD]  min-h-[calc(100vh-48px-36px-16px-32px)] lg:min-h-[calc(100vh-32px-40px-32px)] items-start space-y-1 px-2">
+        <ul className="flex pb-2 lg:pb-0 flex-col  min-h-[calc(100vh-48px-36px-16px-32px)] lg:min-h-[calc(100vh-32px-40px-32px)] items-start space-y-1 px-2">
           {menuList.map(({ groupLabel, menus }, index) => (
             <li className={cn("w-full", groupLabel ? "pt-5" : "")} key={index}>
               {(isOpen && groupLabel) || isOpen === undefined ? (
@@ -97,6 +97,7 @@ export function Menu({ isOpen }: MenuProps) {
                         icon={Icon}
                         label={label}
                         active={active}
+                        //@ts-ignore
                         submenus={submenus}
                         isOpen={isOpen}
                       />
