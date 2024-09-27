@@ -1,7 +1,6 @@
-import { UserNav } from "@/components/admin-panel/user-nav";
-import { SheetMenu } from "@/components/admin-panel/sheet-menu";
-import { Input } from "../ui/input";
 import { Bell, Settings } from "lucide-react";
+import { SheetMenu } from "./sheet-menu";
+import { Input } from "@/components/ui/input";
 
 interface NavbarProps {
   title: string;
