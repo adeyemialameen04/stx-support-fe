@@ -60,7 +60,7 @@ export function Menu({ isOpen }: MenuProps) {
                               variant={active ? "secondary" : "ghost"}
                               className={cn(
                                 "w-full justify-start h-10 mb-1",
-                                active && "!text-[#EF3133]",
+                                // active && "!text-[#EF3133]",
                               )}
                               asChild
                             >

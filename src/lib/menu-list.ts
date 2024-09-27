@@ -1,11 +1,7 @@
-import { LightningBoltIcon } from "@radix-ui/react-icons";
 import {
-  Users,
   LayoutGrid,
   LucideIcon,
   ShoppingCart,
-  Newspaper,
-  Image,
   PanelLeft,
   Heart,
   Lock,
@@ -15,6 +11,7 @@ import {
   Mail,
   Terminal,
   CircleDollarSign,
+  Zap,
 } from "lucide-react";
 
 type Submenu = {
@@ -43,9 +40,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/dashboard",
+          href: "/admin/dashboard",
           label: "Home",
-          active: pathname === "/dashboard",
+          active: pathname === "/admin/dashboard",
           icon: LayoutGrid,
           submenus: [],
         },
@@ -129,7 +126,7 @@ export function getMenuList(pathname: string): Group[] {
           href: "/admin/integrations",
           label: "Integrations",
           active: pathname.includes("/admin/integrations"),
-          icon: LightningBoltIcon as LucideIcon,
+          icon: Zap,
           submenus: [],
         },
         {
