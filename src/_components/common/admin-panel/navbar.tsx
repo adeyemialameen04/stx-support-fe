@@ -1,6 +1,6 @@
 import { Bell, Settings } from "lucide-react";
 import { SheetMenu } from "./sheet-menu";
-import UserDropdown from "../header/user-dropdown";
+import UserDropdown from "../user-dropdown";
 
 export function Navbar({ title }: { title: string }) {
   return (

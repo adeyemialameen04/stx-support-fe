@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Heart, Lock, NotepadText, Share, ShoppingBag } from "lucide-react";
-import { CircularImage } from "../image";
+import { RoundedImage } from "../image";
 import { user_info } from "@/data/mock/user";
 import {
   DropdownMenu,
@@ -45,7 +45,7 @@ export default function Dashboard() {
       <Card className="sm:px-5 py-3">
         <CardHeader className="flex justify-between gap-3 sm:flex-row">
           <div className="flex gap-4">
-            <CircularImage
+            <RoundedImage
               src={user_info.profile_pic}
               alt="User profile pic"
               size={80}

@@ -83,7 +83,7 @@ export default function PostCard({ post }: { post: PostSchema }) {
         <p className="flex items-center">
           <Globe className="mr-2 h-4 w-4" /> Public
         </p>
-        <div className="flex gap-8">
+        <div className="flex gap-4 sm:gap-8">
           <p className="flex items-center gap-2 font-light text-sm">
             {post.like} Like
           </p>
