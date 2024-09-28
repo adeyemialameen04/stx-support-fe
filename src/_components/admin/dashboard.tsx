@@ -41,9 +41,9 @@ const more_ways = [
 
 export default function Dashboard() {
   return (
-    <main className="grid flex-1 items-start gap-4 sm:py-0 md:gap-8">
-      <Card className="px-5 py-3">
-        <CardHeader className="flex justify-between flex-row">
+    <main className="grid items-start gap-4 sm:py-0 md:gap-8">
+      <Card className="sm:px-5 py-3">
+        <CardHeader className="flex justify-between gap-3 sm:flex-row">
           <div className="flex gap-4">
             <CircularImage
               src={user_info.profile_pic}
@@ -51,8 +51,10 @@ export default function Dashboard() {
               size={80}
             />
             <div>
-              <CardTitle className="text-2xl">{user_info.name}</CardTitle>
-              <CardDescription className="text-base">
+              <CardTitle className="text-xl sm:text-2xl">
+                {user_info.name}
+              </CardTitle>
+              <CardDescription className="text-base truncate max-w-[110px]">
                 <Button variant={"link"} asChild className="p-0">
                   <a
                     href={`https://stx-support.tech/${user_info.username}`}
@@ -88,7 +90,7 @@ export default function Dashboard() {
         </CardContent>
         <CardFooter className="flex flex-col items-start gap-3">
           <p className="font-bold text-4xl">3 STX</p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap">
             <div className="flex gap-1 items-center">
               <span className="h-3 w-3 rounded-sm bg-yellow-400"></span>
               <span className="text-xs">0 stx</span>
@@ -108,7 +110,7 @@ export default function Dashboard() {
         </CardFooter>
       </Card>
       <Card className="p-8">
-        <CardContent className="rounded-md border flex flex-col justify-center items-center h-[200px] w-full">
+        <CardContent className="rounded-md border flex flex-col justify-center items-center w-full">
           <CardHeader className="rounded-full p-4 bg-accent">
             <Heart />
           </CardHeader>
