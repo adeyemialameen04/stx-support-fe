@@ -64,9 +64,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "Monetize",
       menus: [
         {
-          href: "/transactions/supporters",
+          href: "/admin/supporters",
           label: "Supporters",
-          active: pathname.includes("/transactions/supporters"),
+          active: pathname.includes("/admin/supporters"),
           icon: Heart,
           submenus: [],
         },
