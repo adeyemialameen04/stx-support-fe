@@ -7,15 +7,17 @@ import { Sidebar } from "./sidebar";
 
 export default function AdminPanelLayout({
   children,
+  className,
 }: {
   children: React.ReactNode;
+  className?: string;
 }) {
   const sidebar = useStore(useSidebarToggle, (state) => state);
 
   if (!sidebar) return null;
 
   return (
-    <>
+    <div className={className}>
       <Sidebar />
       <main
         className={cn(
@@ -31,6 +33,6 @@ export default function AdminPanelLayout({
           sidebar?.isOpen === false ? "lg:ml-[90px]" : "lg:ml-72",
         )}
       ></footer>
-    </>
+    </div>
   );
 }
