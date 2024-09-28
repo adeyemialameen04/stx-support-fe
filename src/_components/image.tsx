@@ -8,7 +8,7 @@ interface ImageProps {
   className?: string;
 }
 
-export function CircularImage({ src, alt, size = 115, className }: ImageProps) {
+export function RoundedImage({ src, alt, size = 115, className }: ImageProps) {
   return (
     <div
       className={cn("relative overflow-hidden rounded-full", className)}

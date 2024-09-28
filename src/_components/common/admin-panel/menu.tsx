@@ -97,7 +97,7 @@ export function Menu({ isOpen }: MenuProps) {
                         icon={Icon}
                         label={label}
                         active={active}
-                        //@ts-ignore
+                        //@ts-expect-error An error would occur here
                         submenus={submenus}
                         isOpen={isOpen}
                       />

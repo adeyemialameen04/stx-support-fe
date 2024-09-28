@@ -13,7 +13,7 @@ import Posts from "@/_components/admin/posts/posts";
 
 export default function PostPage() {
   return (
-    <ContentLayout title="Dashboard">
+    <ContentLayout title="Publish - Posts">
       <main className="max-w-[950px] mx-auto">
         <Breadcrumb className="mb-6">
           <BreadcrumbList>
