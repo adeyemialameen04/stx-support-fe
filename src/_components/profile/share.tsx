@@ -43,16 +43,16 @@ export default function SharePage({
 }) {
   return (
     <Credenza>
-      <CredenzaTrigger asChild className="absolute bottom-[-40px] right-6 z-40">
+      <CredenzaTrigger asChild className="absolute bottom-[-40px] right-4 z-40">
         <Button variant={"ghost"} size={"icon"}>
-          <Upload className="text-muted-foreground" />
+          <Upload className="text-muted-foreground h-5 w-5" />
         </Button>
       </CredenzaTrigger>
 
       <CredenzaContent className="">
         <CredenzaHeader className="my-3">
           <CredenzaTitle className="text-center">
-            Share {name} page
+            Share {name}&apos;s page
           </CredenzaTitle>
         </CredenzaHeader>
         <div className="grid grid-cols-2 gap-4">
@@ -69,6 +69,7 @@ export default function SharePage({
             <Input
               readOnly
               defaultValue={`stx-support.vercel.app/${username}`}
+              disabled
             />
             <EnhancedButton
               variant={"expandIcon"}
@@ -79,6 +80,19 @@ export default function SharePage({
             >
               Copy
             </EnhancedButton>
+          </div>
+          <div className="py-3 px-6 bg-[rgba(95,127,255)]/[.05] border border-[#5F7FFF] rounded-md">
+            <p>
+              <span className="font-semibold">Tip:</span> Add this link to your
+              social bios.
+            </p>
+            <div className="flex gap-4 justify-between max-w-[200px] mx-auto mt-3">
+              {socials.map((item, index) => (
+                <Button variant={"ghost"} size={"icon"} key={index}>
+                  {<item.icon />}
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </CredenzaContent>
