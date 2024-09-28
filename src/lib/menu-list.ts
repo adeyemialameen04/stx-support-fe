@@ -91,9 +91,9 @@ export function getMenuList(pathname: string): Group[] {
           icon: Pen,
           submenus: [
             {
-              href: "/publish/post",
+              href: "/admin/posts",
               label: "Posts",
-              active: pathname === "/products",
+              active: pathname === "/admin/posts",
               icon: Book,
             },
             {
