@@ -68,6 +68,18 @@ body {
   }
 }
 
+.active-underline {
+  position: relative;
+}
+.active-underline::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  bottom: -11px;
+  height: 1px;
+  width: 100%;
+}
+
 @layer base {
   * {
     @apply border-border;
