@@ -49,7 +49,7 @@ export default function Navbar() {
             <Menu />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56" sideOffset={16}>
+        <DropdownMenuContent className="w-56" sideOffset={14}>
           {routes.map((item, index) => (
             <DropdownMenuItem asChild key={index}>
               <Button
