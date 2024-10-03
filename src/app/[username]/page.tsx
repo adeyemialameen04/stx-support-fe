@@ -1,5 +1,4 @@
 import PostCard from "@/_components/admin/posts/post-card";
-import { FillImage } from "@/_components/image";
 import ImageChange from "@/_components/profile/image-change";
 import Support from "@/_components/profile/support";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,6 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { posts } from "@/data/mock/posts";
 import { user_info } from "@/data/mock/user";
-import Image from "next/image";
 
 export default async function UserPage() {
   return (
